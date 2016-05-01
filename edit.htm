@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>add a TODO</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+   <title>edit a TODO</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
 
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style>
-body {
-    background-color:aliceblue;
-}
-
-
-
-</style>
+   <!-- Latest compiled JavaScript -->
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <style>
+	body {
+    	   background-color:aliceblue;
+	   }
+	hr{
+	   background: #888888; height:1px;
+	   }
+   </style>
 </head>
 <body>
+   <div class="container">
+	<h1>Edit a TODO</h1>
+	<hr>
+	<div class="row">
+		<div class="col-sm-4" >
+	       	   <label for="desc"><span class="glyphicon glyphicon-pencil"></span> Beschreibung:</label>
+	  	   <input type="text" class="form-control" id="desc"  value="Beispielseite mit dem Bootstrap Framework anlegen" >
 
-<h1>Edit a TODO</h1>
+	  	   <p><label for="input-date"><span class="glyphicon glyphicon-pencil"></span> Deadline:</label></br>
+          	   <input id="date1" type="date" name="date1" value="06.05.2016"></p>
 
-<label for="desc"> Beschreibung:</label>
-<input type="text" class="form-control" id="desc" style ="width:80%" value="DDDD" >
+	  	   <P><label for="done"><span class="glyphicon glyphicon-pencil"></span> % done:</label>
+	  	   <input type="text" class="form-control" id="done"style ="width:20%" value="0"></p>
+	
+	  		<div align="right">
+	  		  <button type="button"class="btn btn-success" onclick="parent.location='example.htm'"><span class="glyphicon 					glyphicon-ok"></span> save </button>
+	  		</div>
+	</div>
+		</div> 
+		<hr>
 
-<p><label for="input-date"> Deadline:</label></br>
-<input id="date1" type="date" name="date1" value="TT.MM.JJ"></p>
-
-<P><label for="done"> % done:</label>
-<input type="text" class="form-control" id="done"style ="width:80%" ></p>
-
-<button type="button" onclick="parent.location='example.htm'">save </button> 
-
-<div align="right">
-
-<p><a href="example.htm">back to front page</a> | <a href="impressum.htm">Impressum</a></p>
-</div>
-
+	   	<div align="right">
+    		   <p><a href="example.htm">back to front page</a> | <a href="impressum.htm">Impressum</a></p>
+	   	</div>
+   	
 </body>
 </html> 

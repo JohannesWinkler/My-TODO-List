@@ -1,120 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TODO Tracker</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+   <title>TODO Tracker</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
 
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <style>
+	body {
+	   background-color:aliceblue;
+	   }
+	hr{
+	   background: #888888; height:1px;
+	   }
+	table{
+	   margin: 5px 10px 10px 10px;
+	   }
 
-<style>
-body {
-    background-color:aliceblue;
-}
+	th, td {
+    	   padding: 15px;
+   	   text-align: left;
+	   }
+	tr:nth-child(even) {
+    	   background-color: #dddddd;
+	   }
+	tr:nth-child(odd) {
+   	   background-color:#777777;
+	   }
+	th{
+   	   background-color:#333333;
+   	   color: white;
+	   }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-tr:nth-child(odd) {
-   background-color:#777777;
-}
-th	{
-    background-color:#333333;
-    color: white;
-}
+	img {
+      	   float: right;
+    	   margin: 17px 0px 0px 0px;
+	   }
 
-img {
-    float: right;
-    margin: 0 0 10px 10px;
-}
-}
-</style>
+   </style>
 </head>
 <body>
+   <div class="container">
+	<img src="todo.jpeg" style="width:254px;height:145px;"> 
+	<h1> TODO Tracker - Example page </h1>
 
-<img src="todo.jpeg" style="width:250px;height:165px;"> 
-<h1> TODO Tracker - Example page </h1>
-
-<p>This web page allows you to keep track of your TODOs</p>
-
-<p><a href="add.htm">add a new TODO</a></p>
-
-<div align="center">
+	<hr>
+	<div class="row">
+	   <div class="col-sm-8" >
+	   	<h4>This web page allows you to keep track of your TODOs
+		  
+		<div align="right">
+	 	  <button type="button" class="btn btn-primary btn-md"onclick="parent.location='add.htm'"><span class="glyphicon glyphicon-plus"></span> add a new TODO</button>
+		</div></h4>
+	   </div>
+	</div>
+		
  
- <table class ="table table-bordered"style="width:80%">
-  <tr>
-    <th> TODO</th>
-    <th>Deadline</th>
-    <th>% done</th>
-    <th> Options </th>
-  </tr>
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
+ 	   <table class ="table table-bordered"style="width:80%">
+  	      <tr>
+    		<th> TODO</th>
+    		<th>Deadline</th>
+    		<th>% done</th>
+   		<th> Options </th>
+  	      </tr>
+  	      <tr>
+    		<td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
+    		<td>06.04.2016</td>
+    		<td>0</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr>
+  	      <tr>
+    		<td>"Geschenk für Muttertag kaufen"</td>
+    		<td>08.05.2016</td>
+    		<td>40</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr>
+  	      <tr>
+    		<td>"Brot kaufen"</td>
+    		<td>02.05.2016</td>
+    		<td>0</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr> 
+  	      <tr>
+    		<td>"Fenster putzen"</td>
+    		<td>07.05.2016</td>
+    		<td>0</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr>
+  	      <tr>
+    		<td>"Geschenke für Weihnachten kaufen"</td>
+    		<td>24.12.2016</td>
+    		<td>10</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr>
+  	      <tr>
+    		<td>"Kostüm für Halloween aussuchen"</td>
+    		<td>31.10.2016</td>
+    		<td>12</td>
+   		<td> 
+		<button type="button" onclick="alert('not possible yet')"><span class="glyphicon glyphicon-remove"></span> delete</button>
+		<button type="button" onclick="parent.location='edit.htm'"><span class="glyphicon glyphicon-pencil"></span> edit</button> 
+		</td>
+  	      </tr> 
 
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-  <tr>
-    <td>"Beispielseite mit dem Bootstrap Framework anlegen"</td>
-    <td>6. April 2015</td>
-    <td>0</td>
-    <td> <button type="button" onclick="alert('not possible yet')">delete</button> <button type="button" onclick="parent.location='edit.htm'">edit</button> </td>
-  </tr>
-
-
- 
-
-</table> 
-</div>
-<div align="right">
-<a href="impressum.htm">Impressum</a>
-
-</div> 
+	   </table> 
+	<hr>
+	   <div align="right">
+	   <a href="impressum.htm">Impressum</a>
+	   </div>
+   </div> 
 
 </body>
 </html> 

@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+   <title>TODO Tracker</title>
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <link rel="stylesheet" href="{% static 'css/todo.css' %}"> 
+   
+</head>
+<body>
+   <div class="container">
+	<h1> TODO Tracker - Example page </h1>
+
+	<hr>
+	<div class="row">
+	   <div class="col-sm-8" >
+	   	<h4>This web page allows you to keep track of your TODOs
+		  
+		<div align="right">
+	 	  <a class="btn btn-success" href="{% url 'todo_new' %}" class="top-menu"> Add a TODO <span class="glyphicon glyphicon-plus"></span></a>
+		</div></h4>
+	   </div>
+	</div>
+		
+ 
+ 	   <table class ="table table-bordered"style="width:80%">
+  	      <tr>
+    		<th> TODO</th>
+    		<th>Deadline</th>
+    		<th>progress</th>
+   		<th> Options </th>
+  	      </tr>
+		{% for td in todos %}
+  	      <tr>
+    		<td>"{{ td.description }}"</td>
+    		<td>{{ td.deadline}}</td>
+    		<td>{{ td.progress }} %</td>
+   		<td> 
+		<a class="btn btn-danger btn-sm"href="{% url 'todo_remove' pk=td.pk %}"><span class="glyphicon glyphicon-remove"></span> delete</a>
+		<a class="btn btn-warning btn-sm"href="{% url 'todo_edit' pk=td.pk %}"><span class="glyphicon glyphicon-pencil"></span> edit</a> 
+		</td>
+  	      </tr>
+  	     {% endfor %}
+
+	   </table> 
+	<hr>
+	   <div align="right">
+	   <a href="{% url 'todo_impressum' %}" class="top-menu"> Impressum </a>
+	   </div>
+   </div> 
+
+</body>
+</html> 
